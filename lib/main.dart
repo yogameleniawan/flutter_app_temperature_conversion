@@ -27,8 +27,10 @@ class _MyAppState extends State<MyApp> {
   void _konversiSuhu() {
     setState(() {
       nCelcius = double.parse(etCelcius.text);
-      _kelvin = nCelcius + 273;
-      _reamor = (4 / 5) * nCelcius;
+      if (_newValue == "Kelvin")
+        _result = nCelcius + 273;
+      else
+        _result = (4 / 5) * nCelcius;
     });
   }
 
