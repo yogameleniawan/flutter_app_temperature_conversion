@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
   void dropdownOnChanged(String changeValue) {
     setState(() {
       _newValue = changeValue;
+      _konversiSuhu();
     });
   }
 
@@ -67,6 +68,7 @@ class _MyAppState extends State<MyApp> {
                 }).toList(),
                 value: _newValue,
                 onChanged: dropdownOnChanged,
+                onTap: _konversiSuhu,
               ),
               Result(result: _result),
               Convert(konvertHandler: _konversiSuhu),
