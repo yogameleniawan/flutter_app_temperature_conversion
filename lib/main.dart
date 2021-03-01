@@ -32,6 +32,12 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  void dropdownOnChanged(String changeValue) {
+    setState(() {
+      _newValue = changeValue;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -58,7 +64,7 @@ class _MyAppState extends State<MyApp> {
                   );
                 }).toList(),
                 value: _newValue,
-                onChanged: (String changeValue) {},
+                onChanged: dropdownOnChanged,
               ),
               Result(kelvin: _kelvin, reamor: _reamor),
               Convert(konvertHandler: _konversiSuhu),
