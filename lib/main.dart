@@ -49,6 +49,13 @@ class _MyAppState extends State<MyApp> {
               Input(etCelcius: etCelcius),
               Result(kelvin: _kelvin, reamor: _reamor),
               Convert(konvertHandler: _konversiSuhu),
+              Container(
+                child: Text(
+                  "Riwayat Konveresi",
+                  style: TextStyle(fontSize: 25),
+                ),
+              ),
+              Expanded(child: ListView())
             ],
           ),
         ),

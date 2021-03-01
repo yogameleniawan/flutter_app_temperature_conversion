@@ -13,7 +13,10 @@ class Convert extends StatelessWidget {
         onPressed: konvertHandler,
         color: Colors.blueAccent,
         textColor: Colors.white,
-        child: Text("Konversi Suhu"),
+        child: Text(
+          "Konversi Suhu",
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }

@@ -15,28 +15,19 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Column(
-          children: <Widget>[
-            Text("Suhu dalam Kelvin"),
-            Text(
-              _kelvin.toStringAsFixed(2),
-              style: TextStyle(height: 1.5, fontSize: 40),
-            )
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            Text("Suhu dalam Reamor"),
-            Text(
-              _reamor.toStringAsFixed(2),
-              style: TextStyle(height: 1.5, fontSize: 40),
-            )
-          ],
-        ),
-      ],
+    return Container(
+      child: Column(
+        children: [
+          Text(
+            "Hasil",
+            style: TextStyle(fontSize: 26),
+          ),
+          Text(
+            "0.8",
+            style: TextStyle(fontSize: 40),
+          ),
+        ],
+      ),
     );
   }
 }
