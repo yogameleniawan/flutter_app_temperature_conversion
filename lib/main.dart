@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
                 value: _newValue,
                 onChanged: dropdownOnChanged,
               ),
-              Result(kelvin: _kelvin, reamor: _reamor),
+              Result(result: _result),
               Convert(konvertHandler: _konversiSuhu),
               Container(
                 child: Text(
