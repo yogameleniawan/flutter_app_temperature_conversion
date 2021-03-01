@@ -31,6 +31,14 @@ class _MyAppState extends State<MyApp> {
         _result = nCelcius + 273;
       else
         _result = (4 / 5) * nCelcius;
+      addItemToList();
+    });
+  }
+
+  void addItemToList() {
+    setState(() {
+      String hasil = _newValue + " : " + _result.toStringAsFixed(1);
+      listViewItem.insert(0, hasil);
     });
   }
 
@@ -68,7 +76,6 @@ class _MyAppState extends State<MyApp> {
                 }).toList(),
                 value: _newValue,
                 onChanged: dropdownOnChanged,
-                onTap: _konversiSuhu,
               ),
               Result(result: _result),
               Convert(konvertHandler: _konversiSuhu),
